@@ -1,0 +1,22 @@
+spring:
+  config:
+    import: "optional:configserver:http://localhost:8111/"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+logging:
+  leve:
+    com.netflix.eureka: OFF
+    com.netflix.discovery: OFF

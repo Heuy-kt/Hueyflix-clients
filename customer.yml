@@ -1,0 +1,32 @@
+server:
+  port: 8881
+
+spring:
+  config:
+    import: "optional:configserver:http://localhost:8111/"
+  application:
+    name: customer
+  datasource:
+    url: jdbc:postgresql://localhost:5432/heuyflixdatabase
+    username: postgres
+    password: psql
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+application:
+  security:
+    jwt:
+      secret-key: 44a7e53becc13a687f0b510fb6fbc0d0d797ad022874e1a0e742e933b494cd56
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
