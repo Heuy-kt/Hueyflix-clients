@@ -25,8 +25,3 @@ application:
     jwt:
       secret-key: 44a7e53becc13a687f0b510fb6fbc0d0d797ad022874e1a0e742e933b494cd56
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
